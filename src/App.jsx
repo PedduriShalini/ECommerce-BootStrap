@@ -27,28 +27,79 @@ function App() {
 
   return (
     <div>
+       <div>
 
-    <nav className="navbar navbar-expand-lg bg-body-tertiary"> 
-      <div className="container-fluid"> 
-        <a className="navbar-brand" href="#">FreshCart</a> 
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"> <span className="navbar-toggler-icon"></span> 
-        </button> 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent"> 
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
-            <li className="nav-item"> 
-              <a className="nav-link active" href="#">Home</a> 
-              </li> <li className="nav-item"> <a className="nav-link" href="#">Link</a> 
-              </li>
-               </ul>
-                <form>
-                   <input className="form-control me-2" type="search" placeholder="Search" /> 
-                   <button className="btn btn-outline-success" type="submit"> 
-                    Search 
-                    </button>
-                     </form>
-                      </div>
-                       </div> 
-                       </nav>
+ 
+  <div className="bg-light py-1 border-bottom">
+    <div className="container d-flex justify-content-between">
+      <small>Super Value Deals - Save more with coupons</small>
+      <span id="selectedLanguage">English</span>
+    </div>
+  </div>
+
+ 
+  <div className="py-3 border-bottom">
+    <div className="container d-flex align-items-center justify-content-between">
+
+     
+      <h4 className="fw-bold text-success m-0">FreshCart</h4>
+
+     
+      <div className="d-flex w-50">
+        <input
+          className="form-control me-2"
+          placeholder="Search for products"
+        />
+        <button className="btn btn-outline-secondary"><i className="bi bi-search"></i></button>
+      </div>
+
+  
+      <div className="d-flex gap-3 fs-5">
+        <div className="d-flex gap-3 fs-5">
+  <i className="bi bi-heart"></i>
+  <i className="bi bi-person"></i>
+  <i className="bi bi-cart"></i>
+</div>
+      </div>
+
+    </div>
+  </div>
+
+ 
+  <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+    <div className="container">
+
+      <button className="btn btn-success me-3">
+        ☰ All Departments
+      </button>
+
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+
+      <div className="collapse navbar-collapse" id="menu">
+        <ul className="navbar-nav">
+
+          <li className="nav-item"><a className="nav-link">Home</a></li>
+          <li className="nav-item"><a className="nav-link">Shop</a></li>
+          <li className="nav-item"><a className="nav-link">Stores</a></li>
+          <li className="nav-item"><a className="nav-link">Mega menu</a></li>
+          <li className="nav-item"><a className="nav-link">Pages</a></li>
+          <li className="nav-item"><a className="nav-link">Account</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+</div>
+
        <div
   id="carouselExample"
   className="carousel slide mb-5"
@@ -146,21 +197,28 @@ function App() {
       <div className="container mt-5">
         <h3>Popular Products</h3>
 
-        <div className="row">
+        <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3">
           {products.map((item, index) => (
-            <div className="col-md-2" key={index}>
-              <div className="card p-3">
-                <img src={item.img} style={{ height: "120px", objectFit: "contain" }} />
-                   <p className="mt-2">{item.category}</p>
-                <p className="mt-2">{item.name}</p>
+            <div className="col" key={index}>
+  <div className="card p-3 h-100 d-flex flex-column">
 
-                <div className="d-flex justify-content-between align-items-center">
-                  <span>${item.price}</span>
-                  <button className="btn btn-success btn-sm">+ Add</button>
-                </div>
+    <img
+      src={item.img}
+      alt={item.name}
+      style={{ height: "210px", objectFit: "contain" }}
+    />
 
-              </div>
-            </div>
+    <small className="text-muted">{item.category}</small>
+
+    <p className="mt-2 text-truncate">{item.name}</p>
+
+    <div className="d-flex justify-content-between align-items-center mt-auto">
+      <span>${item.price}</span>
+      <button className="btn btn-success btn-sm">+ Add</button>
+    </div>
+
+  </div>
+</div>
           ))}
         </div>
       </div>
