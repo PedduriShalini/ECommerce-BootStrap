@@ -38,7 +38,7 @@ function App() {
   </div>
 
  
-  <div className="py-3 border-bottom">
+<div className="py-3 border-bottom">
     <div className="container d-flex align-items-center justify-content-between">
 
      
@@ -100,49 +100,53 @@ function App() {
 
 </div>
 
-       <div
-  id="carouselExample"
-  className="carousel slide mb-5"
-  data-bs-ride="carousel"
->
-  <div className="carousel-inner">
-
-    <div className="carousel-item active">
-      <img
-        src="/images/slide-1.jpg"
-        className="d-block w-100"
-        style={{ height: "400px", objectFit: "cover" }}
-        alt="slide1"
-      />
-    </div>
-
-    <div className="carousel-item">
-      <img
-        src="/images/slide-2.jpg"
-        className="d-block w-100"
-        style={{ height: "400px", objectFit: "cover" }}
-        alt="slide2"
-      />
-    </div>
-
+   <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
   </div>
+  <div className="carousel-inner">
+<div className="carousel-item active">
+  <img
+    src="images/slide-1.jpg"
+    className="d-block w-100"
+    alt="slide1img"
+  />
 
-  <button
-    className="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExample"
-    data-bs-slide="prev"
+  <div
+    className="carousel-caption d-none d-md-block text-start"
+    style={{ top: "100px", bottom: "auto",color: "black", left: "5%", right: "50%" }}
   >
-    <span className="carousel-control-prev-icon"></span>
+    <button type="button" class="btn btn-warning">Opening Sale Discount 50%</button>
+    <h1>SuperMarket For Fresh Grocery</h1>
+    <p style={{color:"grey"}}>Introduced a new model for online grocery shopping and convenient home delivery.</p>
+
+    <button className="btn btn-dark">
+      Shop Now
+    </button>
+  </div>
+</div>
+    <div className="carousel-item">
+      <img src="images/slide-2.jpg" class="d-block w-100" alt="slide2img"/>
+      <div
+    className="carousel-caption d-none d-md-block text-start"
+    style={{ top: "100px", bottom: "auto",color: "black", left: "5%", right: "50%"
+ }}
+  >
+        <button type="button" class="btn btn-warning">Free Shipping - orders over $100</button>
+        <h1>Free Shipping on orders above $100</h1>
+         <p style={{color:"grey"}}>Free Shipping to First-Time Customers Only, After promotions and discounts will be applied.</p>
+        <button type="button" class="btn btn-secondary">Shop Now </button>
+      </div>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
   </button>
-
-  <button
-    className="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExample"
-    data-bs-slide="next"
-  >
-    <span className="carousel-control-next-icon"></span>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
   </button>
 </div>
      
@@ -152,7 +156,7 @@ function App() {
         <div className="d-flex gap-3">
           {categories.map((item, index) => (
             <div className="card text-center p-3" style={{ width: "150px" }} key={index}>
-              <img src={item.img} style={{ height: "80px", objectFit: "contain" }} />
+              <img src={item.img} style={{ height: "80px" }} />
               <p className="mt-2">{item.name}</p>
             </div>
           ))}
@@ -222,8 +226,98 @@ function App() {
           ))}
         </div>
       </div>
+      <div className="container mt-5">
+  <h3 className="mb-4">Daily Best Sells</h3>
 
+  <div className="row g-3">
+
+    <div className="col-md-3">
+      <div className="position-relative h-100">
+
+        <img 
+          src="images/banner/banner-deal.jpg"
+          className="img-fluid rounded w-100 h-100"
+          style={{ objectFit: "cover" }}
+        />
+
+        <div className="position-absolute top-0 start-0 p-3 text-white">
+          <h5>100% Organic Coffee Beans.</h5>
+          <p>Get the best deal before close.</p>
+          <button className="btn btn-success">Shop Now →</button>
+        </div>
+
+      </div>
     </div>
+
+    <div className="col-md-3">
+      <div className="card h-100 p-3">
+        <img src="images/products/product-img-11.jpg" className="card-img-top" />
+        <p className="text-muted mt-2">Tea, Coffee & Drinks</p>
+        <h6>Roasted Ground Coffee</h6>
+        <p>$13 <del className="text-muted">$18</del></p>
+        <button className="btn btn-success">+ Add to Cart</button>
+      </div>
+    </div>
+
+    <div className="col-md-3">
+      <div className="card h-100 p-3">
+        <img src="images/products/product-img-12.jpg" className="card-img-top" />
+        <p className="text-muted mt-2">Fruits & Vegetables</p>
+        <h6>Crushed Tomatoes</h6>
+        <p>$13 <del className="text-muted">$18</del></p>
+        <button className="btn btn-success">+ Add to Cart</button>
+      </div>
+    </div>
+
+    <div className="col-md-3">
+      <div className="card h-100 p-3">
+        <img src="images/products/product-img-13.jpg" className="card-img-top" />
+        <p className="text-muted mt-2">Fruits & Vegetables</p>
+        <h6>Golden Pineapple</h6>
+        <p>$13 <del className="text-muted">$18</del></p>
+        <button className="btn btn-success">+ Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div className="container mt-5">
+  <div className="row text-center">
+
+    <div className="col-md-3 col-sm-6 mb-4">
+      <img src="images/icons/clock.svg" style={{ height: "40px" }} />
+      <h5 className="mt-3">10 minute grocery now</h5>
+      <p className="text-muted">
+        Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.
+      </p>
+    </div>
+
+    <div className="col-md-3 col-sm-6 mb-4">
+      <img src="images/icons/gift.svg" style={{ height: "40px" }} />
+      <h5 className="mt-3">Best Prices & Offers</h5>
+      <p className="text-muted">
+        Cheaper prices than your local supermarket, great cashback offers to top it off.
+      </p>
+    </div>
+
+    <div className="col-md-3 col-sm-6 mb-4">
+      <img src="images/icons/package.svg" style={{ height: "40px" }} />
+      <h5 className="mt-3">Wide Assortment</h5>
+      <p className="text-muted">
+        Choose from 5000+ products across food, personal care, and household categories.
+      </p>
+    </div>
+
+    <div className="col-md-3 col-sm-6 mb-4">
+      <img src="images/icons/refresh-cw.svg" style={{ height: "40px" }} />
+      <h5 className="mt-3">Easy Returns</h5>
+      <p className="text-muted">
+        Not satisfied? Return at doorstep & get refund within hours. No questions asked.
+      </p>
+    </div>
+
+  </div>
+</div>    </div>
   );
 }
 
