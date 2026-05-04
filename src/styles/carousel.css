@@ -1,0 +1,19 @@
+.custom-carousel {
+  position: relative;
+}
+
+.custom-caption {
+  top: 100px;
+  bottom: auto;
+  left: 5%;
+  right: 50%;
+  color: black;
+}
+
+.caption-text {
+  color: grey;
+}
+
+.custom-caption button {
+  margin-top: 10px;
+}

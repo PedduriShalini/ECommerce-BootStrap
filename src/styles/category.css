@@ -1,0 +1,21 @@
+.category-wrapper {
+  margin-top: 20px;
+}
+
+.category-list {
+  overflow-x: auto;
+}
+
+.category-card {
+  width: 150px;
+  min-width: 150px;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-img {
+  height: 100px;
+}

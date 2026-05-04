@@ -1,0 +1,39 @@
+.topbar-wrapper {
+  font-family: Arial, sans-serif;
+}
+
+
+.topbar {
+  font-size: 14px;
+}
+
+
+.header {
+  padding: 12px 0;
+}
+
+
+.logo {
+  font-weight: bold;
+}
+
+
+.search-box {
+  width: 50%;
+}
+
+
+.icons i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons i:hover {
+  color: green;
+}
+
+
+.nav-section {
+  padding: 10px 0;
+}

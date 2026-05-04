@@ -1,0 +1,12 @@
+.product-img {
+  height: 210px;
+  object-fit: contain;
+}
+
+.product-card {
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  border-color: green;
+}

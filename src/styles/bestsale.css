@@ -1,0 +1,11 @@
+.bestsale-banner {
+  object-fit: cover;
+}
+
+.bestsale-card {
+  transition: 0.3s;
+}
+
+.bestsale-card:hover {
+  border-color: rgb(99, 219, 99);
+}

@@ -1,0 +1,27 @@
+.footer-wrapper p {
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-wrapper p:hover {
+  color: green;
+}
+
+.payment-icon {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.app-img {
+  height: 40px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: green;
+}
